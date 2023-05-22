@@ -27,8 +27,8 @@ Questions about digital technologies and industry epochs:
 quiz(
   question("Industry 3.0 focuses on",
     answer("the role of people and industry in society"),
-    answer("computer aided manufacturing"),
-    answer("discovering logistics in outer space", correct = TRUE),
+    answer("computer aided manufacturing", correct = TRUE),
+    answer("discovering logistics in outer space"),
     answer("digital ecosystems")
   ),
   question("Select Digital Supply Chain technologies",
@@ -92,10 +92,10 @@ quiz(
     answer("16^20")
   ),
   question("What are the limitations of blockchain technology?",
-    answer("It does not require centralized networks", correct = TRUE),
+    answer("It does not require centralized networks"),
     answer("High security"),
     answer("It can't be combined with usual databases"),
     answer("Additional calculations are needed", correct = TRUE)
   )
 )
-```
+``` 
