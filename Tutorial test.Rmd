@@ -1,0 +1,101 @@
+---
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+library(learnr)
+library(tidyverse)
+library(digest)
+#tutorial_options(exercise.timelimit = 10, exercise.checker = checker)
+```
+
+# Digital Supply Chain Management 
+
+## Digital Supply Chain Management Pt1
+
+Some basic information about the development of industry and Digital Supply Chain Management emergence can be presented here along with the main technologies which are included in it
+
+### Quiz 1 - Industry development stages and digital technologies
+
+Questions about digital technologies and industry epochs:
+
+```{r quiz}
+quiz(
+  question("Industry 3.0 focuses on",
+    answer("the role of people and industry in society"),
+    answer("computer aided manufacturing"),
+    answer("discovering logistics in outer space", correct = TRUE),
+    answer("digital ecosystems")
+  ),
+  question("Select Digital Supply Chain technologies",
+    answer("Internet of Things", correct = TRUE),
+    answer("WMS"),
+    answer("Cloud computing", correct = TRUE),
+    answer("Virtual reality", correct = TRUE)
+  )
+)
+```
+
+## Blockchain and Cryptography Pt2
+
+Some paragraphs about main blockchain concepts can be presented here
+
+A video about cryptography:
+
+![](https://youtu.be/8oQBij2C2ds)
+
+To work with cryptographic functions in R we need to load `digest` library first (but it's already loaded)
+
+
+```{r digest, exercise = TRUE}
+library(digest)
+```
+
+Check the resulting output "hash" of encrypting word "learnr"
+
+```{r ex1, exercise = TRUE}
+digest("learnr", algo="sha256", serialize=FALSE, raw=FALSE)
+```
+ 
+
+Check the output, it should be:  
+
+[1] "039a9d654e9a96bde80b89d458bb3e08e99bbcc5fe97e4103e1ea3de4828482e"
+
+```{r quiz_c}
+quiz(
+  question("What are the last symbols of encrypted 'digital_literacy'?",
+    answer("89d2"),
+    answer("bea1"),
+    answer("a3c2"),
+    answer("f76c", correct = TRUE)
+  )
+)
+```
+
+
+### Quiz 2 - General Blockchain Technology Understanding
+
+Questions about basic crypto math and technology features:
+
+```{r quiz2}
+quiz(
+  question("You want to bruteforce cryptocurrency hash starting with 00000 (Hex) How many maximum attempts you will need?",
+    answer("2^16"),
+    answer("2^20", correct = TRUE),
+    answer("2^24"),
+    answer("16^10"),
+    answer("16^20")
+  ),
+  question("What are the limitations of blockchain technology?",
+    answer("It does not require centralized networks", correct = TRUE),
+    answer("High security"),
+    answer("It can't be combined with usual databases"),
+    answer("Additional calculations are needed", correct = TRUE)
+  )
+)
+```
